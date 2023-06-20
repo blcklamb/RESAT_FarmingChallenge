@@ -54,8 +54,10 @@
 
 ## 개선 사항
 
-- [ ] nav bar 다른 페이지 이동 404 처리
+- [ ✅ ] 다른 페이지 이동 404 처리
+  - -> 이동 처리 제외시켜서 처리
 - [ ] mobile view 반응형 매인 배너의 경우
+- [ ] tooltip hover 효과
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

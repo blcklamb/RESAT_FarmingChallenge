@@ -172,6 +172,16 @@ ul {
 }
 
 /* main */
+
+main {
+  border-bottom: 1px solid rgb(229, 234, 234);
+}
+
+.app main {
+  position: relative;
+  min-height: calc(100vh - 211px);
+}
+
 .main {
   overflow: hidden;
   padding-bottom: 60px;
@@ -444,13 +454,13 @@ ul {
   height: 100%;
 }
 
-.happyfolio-banner::before {
+.happyfolio-banner:before {
   content: "";
   position: absolute;
   top: 0px;
-  height: 230px;
   left: -9999px;
   right: -9999px;
+  height: 230px;
   z-index: -1;
   background: rgb(240, 243, 243);
 }
@@ -723,7 +733,7 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   width: 936px;
-  padding-bottom: 24px;
+  padding-bottom: 60px;
 }
 
 .mclass-list .card-li {
@@ -819,4 +829,348 @@ ul {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+}
+
+.happyfolio-list .title-wrapper {
+  margin-bottom: 24px;
+}
+
+.happyfolio-list .title {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.happyfolio-list .subtitle {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.happyfolio-list .subtitle a {
+  font-size: 0.875rem;
+  color: rgb(23, 161, 255);
+  display: flex;
+  gap: 0.2em;
+}
+
+.happyfolio-list .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 936px;
+  padding-bottom: 40px;
+}
+
+.happyfolio-list .card-li {
+  width: 100%;
+  box-shadow: rgba(26, 27, 28, 0.12) 0px 4px 8px 0px;
+  opacity: 1;
+  transition: transform 0.4s ease 0s, box-shadow 0.4s ease 0s;
+  border-radius: 5px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.happyfolio-list .happyfolio-card-image-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.happyfolio-list .happyfolio-card-image-wrapper span {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: 216px;
+  height: 162px;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  inset: 0px;
+}
+
+.happyfolio-list .happyfolio-card-image-wrapper img {
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.happyfolio-list .like-button {
+  border: none;
+  padding: 0px;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-host
+  .happyfolio-card-info-host-image-wrapper {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  margin-right: 4px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-host
+  .happyfolio-card-info-host-image-wrapper
+  span {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: initial;
+  height: initial;
+  background: none;
+  opacity: 1;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  inset: 0px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-host
+  .happyfolio-card-info-host-image-wrapper
+  img {
+  border-radius: 50%;
+  position: absolute;
+  inset: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+  border: none;
+  margin: auto;
+  display: block;
+  width: 0px;
+  height: 0px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-categories
+  .happyfolio-card-info-category {
+  color: rgb(147, 153, 153);
+  background-color: rgb(240, 243, 243);
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-categories {
+  margin-bottom: 5px;
+  display: flex;
+  gap: 8px;
+}
+
+.happyfolio-list .happyfolio-card-info-wrapper .happyfolio-card-info-title {
+  font-size: 14px;
+  font-weight: bold;
+  height: 42px;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-host {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-host
+  .happyfolio-card-info-host-name {
+  font-size: 12px;
+  color: rgb(147, 153, 153);
+}
+
+.happyfolio-list .happyfolio-card-info-wrapper {
+  padding: 12px 12px 17px;
+}
+
+.happyfolio-list
+  .happyfolio-card-info-wrapper
+  .happyfolio-card-info-host-and-price-wrapper
+  .happyfolio-card-info-price {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* footer */
+
+#footer-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 27px 0px 37px;
+  border-top: 1px solid rgb(229, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+
+.footer-wrapper-inner {
+  width: 930px;
+  margin: 0px auto;
+}
+
+.footer-upper {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(210, 215, 215);
+}
+
+.footer-upper .footer-wrapper-site-menu-info .footer-wrapper-menu .site-menu {
+  display: flex;
+  width: 100%;
+}
+
+.footer-upper .footer-wrapper-site-menu-info {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 25px;
+}
+
+.footer-upper .footer-wrapper-site-menu-info .footer-wrapper-menu .site-menu {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+
+.footer-upper
+  .footer-wrapper-site-menu-info
+  .footer-wrapper-site-menu-logo-box {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-upper
+  .footer-wrapper-site-menu-info
+  .footer-wrapper-menu
+  .site-menu
+  li
+  a {
+  display: inline-block;
+  color: rgb(26, 27, 28);
+  transition: all 0.3s ease 0s;
+}
+
+.footer-upper .footer-wrapper-site-cs-info {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-upper .footer-wrapper-site-cs-info .cs-info-list {
+  position: relative;
+}
+
+.footer-upper .footer-wrapper-site-cs-info .sns-menu-pc {
+  display: flex;
+  align-items: center;
+}
+
+.footer-upper .footer-wrapper-site-cs-info .cs-info-list li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.footer-upper .footer-wrapper-site-cs-info .cs-info-list li .service-title {
+  min-width: 82px;
+  font-weight: 700;
+}
+
+.footer-upper
+  .footer-wrapper-site-cs-info
+  .cs-info-list
+  li
+  .service-detail-info {
+  font-size: 12px;
+  line-height: 21px;
+  color: rgb(56, 64, 64);
+  align-items: center;
+  display: flex;
+}
+
+.footer-upper
+  .footer-wrapper-site-cs-info
+  .cs-info-list
+  li
+  .service-detail-info
+  a {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 21px;
+  color: rgb(56, 64, 64);
+}
+
+.footer-lower {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 3;
+}
+
+.footer-lower .footer-wrapper-company-info-textbox p {
+  font-size: 12px;
+  line-height: 18px;
+  color: rgb(171, 177, 177);
+  word-break: keep-all;
+}
+
+.footer-lower a {
+  flex-shrink: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(171, 177, 177);
 }
