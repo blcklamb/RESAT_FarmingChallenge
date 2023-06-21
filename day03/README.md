@@ -61,6 +61,7 @@
 ## 개선 사항
 
 - [ ] 목표 설정해서 헤더에 바뀌도록 설정
+- [ ] 완료 시 축하 애니메이션
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
