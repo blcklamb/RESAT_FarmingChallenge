@@ -1,11 +1,11 @@
 import Col from "react-bootstrap/Col"
 import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row"
-
-import { useState, useEffect, useRef } from "react"
 import Button from "react-bootstrap/esm/Button"
 
-const Timer = () => {
+import { useState, useEffect, useRef } from "react"
+
+const TimerDown = () => {
   const [targetTime, setTargetTime] = useState({ hour: 0, minute: 0, second: 0 })
   const [timer, setTimer] = useState(0)
   const [isStarted, setIsStarted] = useState(false)
@@ -24,6 +24,12 @@ const Timer = () => {
     if (isStarted) {
       if (mode === 0) {
         setMode(1)
+      }
+      if (timer < 0) {
+        setTimer(0)
+        alert("타이머가 종료되었습니다")
+        setMode(0)
+        setIsStarted(false)
       }
       tick.current = setInterval(() => {
         setTimer((timer) => timer - 1)
@@ -44,7 +50,8 @@ const Timer = () => {
     let hours = Math.floor(totalSeconds / (60 * 60))
     let minutes = Math.floor((totalSeconds % (60 * 60)) / 60)
     let seconds = Math.floor(totalSeconds % 60)
-    return [hours, minutes, seconds]
+
+    return [hours.toString().padStart(2, "0"), minutes.toString().padStart(2, "0"), seconds.toString().padStart(2, "0")]
   }
 
   const submitTargetCount = () => {
@@ -58,16 +65,25 @@ const Timer = () => {
   }
 
   const onClickStartButton = () => {
+    if (getTargetCountDownSecond(targetTime) === 0) {
+      alert("카운트다운할 시간을 설정해주세요")
+      return
+    }
     mode === 0 && submitTargetCount()
     setIsStarted(true)
   }
 
   const onClickStopButton = () => {
+    if (mode === 0) {
+      alert("시간을 설정하고, 타이머 START 버튼을 눌러주세요")
+      return
+    }
     setMode(2)
     setIsStarted(false)
   }
 
   const onClickResetButton = () => {
+    if (mode === 0) return
     if (window.confirm("정말로 초기화하시겠어요?")) {
       setMode(0)
       setIsStarted(false)
@@ -138,7 +154,7 @@ const Timer = () => {
         </Row>
       )}
 
-      <Row className="mb-2" style={{ justifyContent: "center" }}>
+      <Row className="mb-2 time-display" style={{ justifyContent: "center" }}>
         {getSecondToFormat(timer)[0]}:{getSecondToFormat(timer)[1]}:{getSecondToFormat(timer)[2]}
       </Row>
       <Row>
@@ -162,4 +178,4 @@ const Timer = () => {
   )
 }
 
-export default Timer
+export default TimerDown
