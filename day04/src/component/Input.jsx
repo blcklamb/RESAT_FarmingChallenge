@@ -15,7 +15,7 @@ import { styled } from "@mui/material/styles";
 function Input() {
   return (
     <Box
-      container
+      container="true"
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -57,10 +57,10 @@ function Input() {
         item
         sx={{ display: "flex", justifyContent: "space-between", gap: "10px" }}
       >
-        <ColorButton customColor="grey">낮음</ColorButton>
-        <ColorButton customColor="green">보통</ColorButton>
-        <ColorButton customColor="orange">높음</ColorButton>
-        <ColorButton customColor="red">!!</ColorButton>
+        <ColorButton customcolor="grey">낮음</ColorButton>
+        <ColorButton customcolor="green">보통</ColorButton>
+        <ColorButton customcolor="orange">높음</ColorButton>
+        <ColorButton customcolor="red">!!</ColorButton>
       </Grid>
     </Box>
   );
@@ -68,7 +68,7 @@ function Input() {
 
 export default Input;
 
-const colorMapping = {
+export const colorMapping = {
   grey: {
     default: grey[500],
     hover: grey[700],
@@ -87,12 +87,12 @@ const colorMapping = {
   },
 };
 
-const ColorButton = styled(Button)(({ theme, customColor }) => ({
+const ColorButton = styled(Button)(({ theme, customcolor }) => ({
   color: theme.palette.getContrastText(purple[500]),
-  backgroundColor: `${colorMapping[customColor].default}`,
+  backgroundColor: `${colorMapping[customcolor].default}`,
   borderRadius: 28,
   width: "100%",
   "&:hover": {
-    backgroundColor: `${colorMapping[customColor].hover}`,
+    backgroundColor: `${colorMapping[customcolor].hover}`,
   },
 }));
