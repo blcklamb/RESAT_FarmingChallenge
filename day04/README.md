@@ -70,6 +70,7 @@
 ## 개선 사항
 
 - [ ] 우선 순위 수정 가능 기능
+- [ ] 스타일 스택 수정
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
