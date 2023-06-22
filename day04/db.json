@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "content": "파밍챌린지 4일차 인증하기",
+      "priority": 1,
+      "done": true
+    },
+    {
+      "id": 2,
+      "content": "점심 맛있게 먹기",
+      "priority": 3,
+      "done": true
+    },
+    {
+      "id": 3,
+      "content": "창틀 청소하기",
+      "priority": 2,
+      "done": false
+    },
+    {
+      "id": 4,
+      "content": "책 반납하기",
+      "priority": 4,
+      "done": true
+    }
+  ]
+}
