@@ -9,10 +9,12 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
-        <!-- <img> 첨부 예정 -->
+        <img width="1112" alt="day03_capture" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/9794a6a0-1174-4f1d-b57d-1e2ee15b1418">
     </div>
+
   </a>
 <h3 align="center">🌱DAY03: 카운트다운 타이머 만들기🌱</h3>
+<h3><a href="https://resat-farming-challenge-livid.vercel.app/">⏲ 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.21</h3>
 </div>
 
@@ -52,6 +54,8 @@
 
 ![CSS][css-shield]
 
+![typescript][javascript-shield]
+
 ![REACT][react-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -62,6 +66,9 @@
 
 - [ ] 목표 설정해서 헤더에 바뀌도록 설정
 - [ ] 완료 시 축하 애니메이션
+- [ ] 시, 분, 초 명시
+- [ ] 스타트인 경우 스타트 활성화 필요
+- [ ] 리셋하면 설정한 시간도 00:00:00으로 돌리기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -69,4 +76,5 @@
 
 [html-shield]: https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [css-shield]: https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[javascript-shield]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [react-shield]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white
