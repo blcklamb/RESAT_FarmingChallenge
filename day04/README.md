@@ -9,12 +9,12 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
-        <!-- <img width="1112" alt="day03_capture" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/9794a6a0-1174-4f1d-b57d-1e2ee15b1418"> -->
+        <img width="971" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/5254f303-ee66-4ed4-a5cf-8d305f7b6f4b">
     </div>
 
   </a>
 <h3 align="center">🌱DAY04: To-Do 리스트 만들기🌱</h3>
-<!-- <h3><a href="https://resat-farming-challenge-livid.vercel.app/">⏲ 구경하러 가기</a></h3> -->
+<h3><a href="https://blcklamb-resat-farming-challenge-todo.vercel.app//">⏲ 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.22</h3>
 </div>
 
@@ -68,6 +68,8 @@
 <!-- ROADMAP -->
 
 ## 개선 사항
+
+- [ ] 우선 순위 수정 가능 기능
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
