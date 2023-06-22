@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box } from "@mui/material";
 import MUIList from "@mui/material/List";
-import { colorMapping } from "./Input";
 import ListItem from "./ListItem";
 
-function List({ data }) {
+function List({ data, refetch }) {
   return (
     <Box
       container="true"
@@ -17,7 +16,7 @@ function List({ data }) {
     >
       <MUIList sx={{ width: "100%" }}>
         {data.map((ele) => {
-          return <ListItem singleItem={ele} />;
+          return <ListItem singleItem={ele} key={ele.id} refetch={refetch} />;
         })}
       </MUIList>
     </Box>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
@@ -12,17 +12,17 @@ import MenuList from "@mui/material/MenuList";
 
 const options = ["전체", "완료", "미완료"];
 
-function Sort() {
-  const [open, setOpen] = React.useState(false);
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
-  const anchorRef = React.useRef(null);
+function Sort({ sortBy }) {
+  const [open, setOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const anchorRef = useRef(null);
 
   const handleClick = () => {
-    console.info(`You clicked ${options[selectedIndex]}`);
+    sortBy(options[selectedIndex]);
   };
 
   const handleMenuItemClick = (event, index) => {
-    console.log("메뉴 클릭!");
+    sortBy(options[index]);
     setSelectedIndex(index);
     setOpen(false);
   };

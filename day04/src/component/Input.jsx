@@ -1,18 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import DirectionsIcon from "@mui/icons-material/Directions";
-import { Box, Container, Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import SendIcon from "@mui/icons-material/Send";
 
 import { green, grey, orange, purple, red } from "@mui/material/colors";
 
 import { styled } from "@mui/material/styles";
 
-function Input() {
+function Input({ refetch }) {
+  const [priorityColor, setIsPriorityColor] = useState("grey");
+  const [postContent, setPostContent] = useState("");
+
+  const onClickPriorityColor = (priority) => {
+    setIsPriorityColor(
+      Object.entries(colorMapping).filter(
+        (_, index) => index === priority
+      )[0][0]
+    );
+  };
+
+  const onChangeTodoContent = (event) => {
+    setPostContent(event.target.value);
+  };
+
+  const onClickSendButton = () => {
+    postTodo();
+    refetch();
+  };
+
+  const postTodo = async () => {
+    const data = {
+      id: Date.now(),
+      content: postContent,
+      priority: Object.keys(colorMapping).findIndex(
+        (ele) => ele === priorityColor
+      ),
+      done: false,
+    };
+    await fetch("http://localhost:80/posts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(() => {
+      setIsPriorityColor("grey");
+      setPostContent("");
+    });
+  };
+
   return (
     <Box
       container="true"
@@ -34,12 +76,20 @@ function Input() {
             width: "100%",
           }}
         >
-          <IconButton sx={{ p: "10px" }} aria-label="menu">
+          <IconButton
+            sx={{
+              p: "10px",
+              backgroundColor: `${colorMapping[priorityColor].default}`,
+            }}
+            aria-label="menu"
+          >
             <MenuIcon />
           </IconButton>
           <InputBase
             sx={{ ml: 1, flex: 1 }}
-            placeholder="Search Google Maps"
+            placeholder="할 일을 입력해요"
+            value={postContent}
+            onChange={(e) => onChangeTodoContent(e)}
             inputProps={{ "aria-label": "search google maps" }}
           />
 
@@ -48,8 +98,9 @@ function Input() {
             color="primary"
             sx={{ p: "10px" }}
             aria-label="directions"
+            onClick={() => onClickSendButton()}
           >
-            <DirectionsIcon />
+            <SendIcon />
           </IconButton>
         </Paper>
       </Grid>
@@ -57,10 +108,24 @@ function Input() {
         item
         sx={{ display: "flex", justifyContent: "space-between", gap: "10px" }}
       >
-        <ColorButton customcolor="grey">낮음</ColorButton>
-        <ColorButton customcolor="green">보통</ColorButton>
-        <ColorButton customcolor="orange">높음</ColorButton>
-        <ColorButton customcolor="red">!!</ColorButton>
+        <ColorButton customcolor="grey" onClick={() => onClickPriorityColor(3)}>
+          낮음
+        </ColorButton>
+        <ColorButton
+          customcolor="green"
+          onClick={() => onClickPriorityColor(2)}
+        >
+          보통
+        </ColorButton>
+        <ColorButton
+          customcolor="orange"
+          onClick={() => onClickPriorityColor(1)}
+        >
+          높음
+        </ColorButton>
+        <ColorButton customcolor="red" onClick={() => onClickPriorityColor(0)}>
+          !!
+        </ColorButton>
       </Grid>
     </Box>
   );
@@ -69,21 +134,21 @@ function Input() {
 export default Input;
 
 export const colorMapping = {
-  grey: {
-    default: grey[500],
-    hover: grey[700],
-  },
-  green: {
-    default: green[500],
-    hover: green[700],
+  red: {
+    default: red[500],
+    hover: red[700],
   },
   orange: {
     default: orange[500],
     hover: orange[700],
   },
-  red: {
-    default: red[500],
-    hover: red[700],
+  green: {
+    default: green[500],
+    hover: green[700],
+  },
+  grey: {
+    default: grey[500],
+    hover: grey[700],
   },
 };
 

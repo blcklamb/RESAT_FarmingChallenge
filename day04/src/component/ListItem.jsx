@@ -14,26 +14,76 @@ import TextField from "@mui/material/TextField";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
 
-function ListItem({ singleItem }) {
+function ListItem({ singleItem, refetch }) {
   const [isEditting, setIsEditting] = useState(false);
   const [isDone, setIsDone] = useState(singleItem.done);
+  const [postData, setPostData] = useState(singleItem.content);
 
   const priorityToColor = (priority) => {
     return Object.entries(colorMapping).filter(
-      (_, index) => index === 4 - priority
+      (_, index) => index === priority
     )[0][1].default;
   };
 
   const onClickEditButton = () => {
-    setIsEditting((prev) => !prev);
+    setIsEditting(true);
   };
 
   const onClickDeletedButton = () => {
-    window.confirm("정말 삭제할거예요?");
+    if (window.confirm("정말 삭제할거예요?")) {
+      deleteTodo();
+      refetch();
+    }
   };
 
-  const onClickCheckedButton = () => {
-    setIsDone((prev) => !prev);
+  const onClickCheckedButton = async () => {
+    await setIsDone((prev) => !prev);
+    await updateTodoChecked();
+    await refetch();
+  };
+
+  const onClickEditConfirmButton = () => {
+    updateTodoChecked();
+    refetch();
+  };
+
+  const onEditTodo = (event) => {
+    setPostData(event.target.value);
+  };
+
+  const onClickCancelButton = () => {
+    setIsEditting(false);
+  };
+
+  const deleteTodo = async () => {
+    await fetch("http://localhost:80/posts/" + singleItem.id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json());
+  };
+
+  const updateTodoChecked = async () => {
+    const edittedData = {
+      id: singleItem.id,
+      content: postData,
+      priority: singleItem.priority,
+      done: !isDone,
+    };
+    await fetch("http://localhost:80/posts/" + singleItem.id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(edittedData),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setIsEditting(false);
+        setIsDone(!isDone);
+        setPostData(postData);
+      });
   };
 
   return (
@@ -47,14 +97,14 @@ function ListItem({ singleItem }) {
                 <IconButton
                   edge="end"
                   aria-label="confirm"
-                  onClick={() => onClickEditButton()}
+                  onClick={() => onClickEditConfirmButton()}
                 >
                   <CheckIcon />
                 </IconButton>
                 <IconButton
                   edge="end"
                   aria-label="confirm"
-                  onClick={() => onClickEditButton()}
+                  onClick={() => onClickCancelButton()}
                 >
                   <CloseIcon />
                 </IconButton>
@@ -95,11 +145,12 @@ function ListItem({ singleItem }) {
             multiline
             maxRows={4}
             variant="standard"
-            defaultValue={singleItem.content}
+            defaultValue={postData}
+            onChange={(e) => onEditTodo(e)}
             sx={{ width: "100%" }}
           />
         )}
-        {!isEditting && <ListItemText primary={singleItem.content} />}
+        {!isEditting && <ListItemText primary={postData} />}
       </MUIListItem>
     </>
   );

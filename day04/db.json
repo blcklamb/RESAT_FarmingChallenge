@@ -3,25 +3,37 @@
     {
       "id": 1,
       "content": "파밍챌린지 4일차 인증하기",
-      "priority": 1,
+      "priority": 0,
       "done": true
     },
     {
       "id": 2,
       "content": "점심 맛있게 먹기",
-      "priority": 3,
+      "priority": 2,
       "done": true
     },
     {
       "id": 3,
       "content": "창틀 청소하기",
-      "priority": 2,
+      "priority": 1,
       "done": false
     },
     {
       "id": 4,
       "content": "책 반납하기",
-      "priority": 4,
+      "priority": 2,
+      "done": true
+    },
+    {
+      "id": 1687425122932,
+      "content": "인사 잘하기!",
+      "priority": 1,
+      "done": false
+    },
+    {
+      "id": 1687425350415,
+      "content": "커피 맛있게 먹기",
+      "priority": 0,
       "done": true
     }
   ]
