@@ -3,7 +3,6 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
-import DirectionsIcon from "@mui/icons-material/Directions";
 import { Box, Grid } from "@mui/material";
 import { Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -43,7 +42,7 @@ function Input({ refetch }) {
       ),
       done: false,
     };
-    await fetch("http://localhost:80/posts", {
+    await fetch(`${process.env.ENDPOINT}/posts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

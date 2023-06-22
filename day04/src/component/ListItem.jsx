@@ -56,7 +56,7 @@ function ListItem({ singleItem, refetch }) {
   };
 
   const deleteTodo = async () => {
-    await fetch("http://localhost:80/posts/" + singleItem.id, {
+    await fetch(`${process.env.ENDPOINT}/posts` + singleItem.id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -71,7 +71,7 @@ function ListItem({ singleItem, refetch }) {
       priority: singleItem.priority,
       done: !isDone,
     };
-    await fetch("http://localhost:80/posts/" + singleItem.id, {
+    await fetch(`${process.env.ENDPOINT}/posts` + singleItem.id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
