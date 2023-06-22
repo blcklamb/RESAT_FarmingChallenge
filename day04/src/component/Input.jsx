@@ -42,7 +42,7 @@ function Input({ refetch }) {
       ),
       done: false,
     };
-    await fetch(`${process.env.ENDPOINT}/posts`, {
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

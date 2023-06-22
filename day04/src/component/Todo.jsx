@@ -8,9 +8,9 @@ function Todo() {
   const [listData, setListData] = useState([]);
   const [refetch, setRefetch] = useState(true);
   const fetchData = async () => {
-    const data = await fetch(`${process.env.ENDPOINT}/posts`).then((res) =>
-      res.json()
-    );
+    const data = await fetch(
+      `${process.env.REACT_APP_REACT_APP_ENDPOINT}/posts`
+    ).then((res) => res.json());
     setListData(data);
   };
 
@@ -19,9 +19,9 @@ function Todo() {
   };
 
   const onChangeSortBy = async (isDone) => {
-    let sortedData = await fetch(`${process.env.ENDPOINT}/posts`).then((res) =>
-      res.json()
-    );
+    let sortedData = await fetch(
+      `${process.env.REACT_APP_ENDPOINT}/posts`
+    ).then((res) => res.json());
     if (isDone === "완료") {
       sortedData = sortedData.filter((ele) => ele.done);
     } else if (isDone === "미완료") {
