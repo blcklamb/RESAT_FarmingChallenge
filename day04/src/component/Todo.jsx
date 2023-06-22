@@ -22,11 +22,9 @@ function Todo() {
     let sortedData = await fetch("http://localhost:80/posts").then((res) =>
       res.json()
     );
-    if (isDone === "전체") {
-      sortedData = listData;
-    } else if (isDone === "완료") {
+    if (isDone === "완료") {
       sortedData = sortedData.filter((ele) => ele.done);
-    } else {
+    } else if (isDone === "미완료") {
       sortedData = sortedData.filter((ele) => !ele.done);
     }
     setListData(sortedData);
