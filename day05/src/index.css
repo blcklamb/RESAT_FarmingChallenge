@@ -31,6 +31,8 @@ code {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
+  margin: auto;
+  margin-bottom: 10px;
 }
 .react-calendar__navigation button {
   color: #6f48eb;
@@ -169,4 +171,14 @@ button.memo-add-btn:active {
 
 button.memo-add-btn:hover {
   background-color: rgb(182, 182, 182);
+}
+
+li {
+  justify-content: space-between;
+  width: 270px;
+}
+
+.list-btn-wrapper {
+  display: flex;
+  gap: 5px;
 }

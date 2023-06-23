@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import MemoItem from "./MemoItem";
 
 function MemoSection({ date, memoList, refetchFunc }) {
   const [todo, setTodo] = useState("");
@@ -15,12 +16,7 @@ function MemoSection({ date, memoList, refetchFunc }) {
     const data = {
       id: Date.now(),
       date: date.getTime(),
-      memoList: [
-        {
-          id: 0,
-          content: todo,
-        },
-      ],
+      memo: todo,
     };
     await fetch(
       `${
@@ -47,7 +43,9 @@ function MemoSection({ date, memoList, refetchFunc }) {
       <div>
         <ul>
           {memoList.map((ele) => {
-            return <li key={ele.id}>{ele.content}</li>;
+            return (
+              <MemoItem key={ele.id} singleItem={ele} refetch={refetchFunc} />
+            );
           })}
         </ul>
       </div>

@@ -30,10 +30,7 @@ function Calendar() {
       const filteredMemo = memos.filter(
         (ele) => convertMMDDYYYY(ele.date) === convertMMDDYYYY(date)
       );
-      console.log(filteredMemo.map((ele) => ele.memoList).flat());
-      if (filteredMemo.length > 0) {
-        return filteredMemo.map((ele) => ele.memoList).flat();
-      }
+      return filteredMemo;
     }
   };
 
@@ -59,7 +56,7 @@ function Calendar() {
         onChange={onChange}
         value={value}
         locale="en-EN"
-        className="mx-auto w-full text-sm border-b"
+        className=" w-full"
         tileContent={({ date, view }) => {
           if (
             memo.find((x) => convertMMDDYYYY(x.date) === convertMMDDYYYY(date))
@@ -72,9 +69,7 @@ function Calendar() {
           }
         }}
       />
-      <div className="text-gray-500 mt-4">
-        <span className="bold">Selected Date:</span> {value.toDateString()}
-      </div>
+
       <MemoSection
         date={value}
         memoList={selectedMemo}
