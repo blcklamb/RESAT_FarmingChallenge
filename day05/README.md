@@ -9,12 +9,13 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
-        <!-- <img width="971" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/5254f303-ee66-4ed4-a5cf-8d305f7b6f4b"> -->
+        <img width="773" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/b05be391-24e3-4c8f-a9e0-8804221a0625">
+
     </div>
 
   </a>
 <h3 align="center">🌱DAY05: 달력 만들기🌱</h3>
-<!-- <h3><a href="https://blcklamb-resat-farming-challenge-todo.vercel.app//">⏲ 구경하러 가기</a></h3> -->
+<h3><a href="https://resat-farming-challenge-qznu.vercel.app/">📆 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.23</h3>
 </div>
 
@@ -66,6 +67,9 @@
 <!-- ROADMAP -->
 
 ## 개선 사항
+
+- [ ] CRUD 비동기 걸기
+- [ ] 버튼 + 깨지는 것 수정하기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

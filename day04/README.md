@@ -1,4 +1,4 @@
-# 👩‍🌾 RESAT_FarmingChallenge DAY03 🌾
+# 👩‍🌾 RESAT_FarmingChallenge DAY04 🌾
 
 <a name="readme-top"></a>
 
@@ -59,7 +59,7 @@
 
 ![CSS][css-shield]
 
-![typescript][javascript-shield]
+![JAVASCRIPT][javascript-shield]
 
 ![REACT][react-shield]
 
@@ -71,6 +71,7 @@
 
 - [ ] 우선 순위 수정 가능 기능
 - [ ] 스타일 스택 수정
+- [ ] 배포 다시 하기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
