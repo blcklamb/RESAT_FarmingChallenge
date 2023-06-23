@@ -107,3 +107,66 @@ abbr[title] {
 .items-center {
   align-items: center;
 }
+.mx-auto {
+  margin: auto;
+}
+.w-full {
+  max-width: 100%;
+}
+
+.memo-section {
+  width: 348px;
+  max-width: 100%;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  background-color: #fff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  padding: 0.1em;
+  padding-top: 1em;
+}
+
+.memo-section-header {
+  text-align: center;
+  height: 30px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+input {
+  width: 280px;
+  height: 32px;
+  font-size: 15px;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(233, 233, 233);
+  margin-right: 8px;
+}
+
+.input-wrapper {
+  padding: 1em;
+}
+
+.memo-add-btn {
+  border-radius: 28px;
+  background-color: rgb(233, 233, 233);
+  height: 34px;
+  width: 34px;
+  border: 0;
+  outline: none;
+  font-size: large;
+  color: #6f48eb;
+}
+
+button.memo-add-btn:active {
+  background-color: rgb(182, 182, 182);
+}
+
+button.memo-add-btn:hover {
+  background-color: rgb(182, 182, 182);
+}
