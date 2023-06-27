@@ -6,7 +6,7 @@ function App() {
       <header>
         <h1>그저 캐러셀 🖼️</h1>
       </header>
-      <CarouselComponent></CarouselComponent>
+      <CarouselComponent />
     </div>
   );
 }

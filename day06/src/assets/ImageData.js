@@ -28,4 +28,9 @@ export const imageData = [
     alt: "image5",
     url: "/image05.jpeg",
   },
+  {
+    label: "Image 6",
+    alt: "image6",
+    url: "/image06.jpeg",
+  },
 ];
