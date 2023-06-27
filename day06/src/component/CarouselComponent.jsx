@@ -5,10 +5,11 @@ import { imageData } from "../assets/ImageData";
 
 const CarouselComponent = () => {
   const renderSlides = imageData.map((image) => (
-    <div key={image.alt}>
+    <div key={image.alt} className="img-center">
       <img src={image.url} alt={image.alt} />
     </div>
   ));
+  console.log(imageData.length);
 
   const [currentIndex, setCurrentIndex] = useState();
   function handleChange(index) {
@@ -20,6 +21,8 @@ const CarouselComponent = () => {
         showArrows={true}
         autoPlay={true}
         infiniteLoop={true}
+        interval={2000}
+        dynamicHeight={true}
         showThumbs={true}
         selectedItem={imageData[currentIndex]}
         onChange={handleChange}
