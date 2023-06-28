@@ -9,7 +9,6 @@ const CarouselComponent = () => {
       <img src={image.url} alt={image.alt} />
     </div>
   ));
-  console.log(imageData.length);
 
   const [currentIndex, setCurrentIndex] = useState();
   function handleChange(index) {
