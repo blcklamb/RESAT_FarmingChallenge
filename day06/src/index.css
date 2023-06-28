@@ -63,7 +63,6 @@ code,
 del,
 dfn,
 em,
-img,
 ins,
 kbd,
 q,
@@ -84,8 +83,6 @@ dl,
 dt,
 dd,
 ol,
-ul,
-li,
 fieldset,
 form,
 label,
@@ -395,6 +392,11 @@ main {
   list-style: none;
 }
 
+.miniintern-list .card-li img {
+  width: 100%;
+  height: 100%;
+}
+
 .miniintern-list .card {
   width: 216px;
   border-radius: 5px;
@@ -489,15 +491,17 @@ main {
 }
 
 .happyfolio-imageslide-wrapper {
-  margin: 15px;
+  width: 530px;
+  height: 251px;
+  border-radius: 15px;
 }
 
-.happyfolio-imageslide-img div {
+.happyfolio-imageslide-img {
   width: 335px;
   height: 251px;
 }
 
-.happyfolio-banner-image-wrapper img {
+.happyfolio-imageslide-img img {
   width: 100%;
   height: 100%;
 }

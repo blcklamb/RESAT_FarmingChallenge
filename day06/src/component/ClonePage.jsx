@@ -557,13 +557,7 @@ function ClonePage() {
             </div>
             {/* <!-- 해피폴리오 배너 --> */}
             <div className="happyfolio-banner">
-              {/* <img
-                  alt="지방대 문과생이 IT 취업에 이직까지 성공했다고?"
-                  src="https://miniintern-upload.s3.ap-northeast-2.amazonaws.com/35132/fcb703d1-6104-4175-be4c-8982bed44e71/지방대-문과생이-IT-취업에-이직까지-성공했다고-cover.jpg"
-                /> */}
-              <div>
-                <ImageSlider />
-              </div>
+              <ImageSlider />
               <div className="happyfolio-banner-info-box">
                 <span className="happyfolio-banner-info-badge">
                   서비스 런칭

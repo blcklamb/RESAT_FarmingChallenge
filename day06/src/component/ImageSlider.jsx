@@ -3,7 +3,6 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 function ImageSlider() {
-  // s3 ㅑ
   const SLIDER_IMAGE = [
     {
       label: "1-30대 비전공자의 커리어 전환기",
@@ -29,11 +28,7 @@ function ImageSlider() {
   ];
   const renderSlides = SLIDER_IMAGE.map((image) => (
     <div key={image.label} className="happyfolio-imageslide-img">
-      <div
-        src={image.url}
-        alt={image.alt}
-        // style={{ backgroundImage: `url("${image.url}")` }}
-      />
+      <img src={image.url} alt={image.alt} />
     </div>
   ));
 
@@ -54,13 +49,7 @@ function ImageSlider() {
         selectedItem={SLIDER_IMAGE[currentIndex]}
         onChange={handleChange}
       >
-        <div className="happyfolio-imageslide-img">
-          <img src={SLIDER_IMAGE[0].url} alt="1" />
-        </div>
-        <div className="happyfolio-imageslide-img">
-          <img src={SLIDER_IMAGE[1].url} alt="2" />
-        </div>
-        {/* {renderSlides} */}
+        {renderSlides}
       </Carousel>
     </div>
   );
