@@ -1,12 +1,13 @@
-import CarouselComponent from "./component/CarouselComponent";
+import ClonePage from "./component/ClonePage";
+import SVGLoader from "./assets/SVGLoader";
+import ImageSlider from "./component/ImageSlider";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>그저 캐러셀 🖼️</h1>
-      </header>
-      <CarouselComponent />
+      <SVGLoader />
+      <ImageSlider />
+      <ClonePage />
     </div>
   );
 }
