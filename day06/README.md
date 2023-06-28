@@ -1,4 +1,4 @@
-# 👩‍🌾 RESAT_FarmingChallenge DAY05 🌾
+# 👩‍🌾 RESAT_FarmingChallenge DAY06-08 🌾
 
 <a name="readme-top"></a>
 
@@ -9,13 +9,13 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
-        <!-- <img width="773" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/b05be391-24e3-4c8f-a9e0-8804221a0625"> -->
+        <img width="1183" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/f9153da3-7170-494e-81e7-9200d4c3a58f">
     </div>
 
   </a>
-<h3 align="center">🌱DAY06: 이미지 슬라이드 (캐러셀) 만들기🌱</h3>
-<!-- <h3><a href="https://resat-farming-challenge-qznu.vercel.app/">📆 구경하러 가기</a></h3> -->
-<h3 align="center">일자: 23.06.26</h3>
+<h3 align="center">🌱DAY06-08: 이미지 슬라이드 (캐러셀) 만들기🌱</h3>
+<h3><a href="https://resat-farming-challenge-carousel.vercel.app/">🪄 구경하러 가기</a></h3>
+<h3 align="center">일자: 23.06.26-23.06.28</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
