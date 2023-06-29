@@ -1,4 +1,4 @@
-import SVGLoader from "./assets/SVGLoader";
+import SVGLoader from "./assets/SVGLoader.tsx";
 import Header from "./component/Header.tsx";
 import { GlobalStyle } from "./style/global-style.ts";
 

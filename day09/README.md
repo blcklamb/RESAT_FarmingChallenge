@@ -1,4 +1,4 @@
-# 👩‍🌾 RESAT_FarmingChallenge DAY06-08 🌾
+# 👩‍🌾 RESAT_FarmingChallenge DAY09 🌾
 
 <a name="readme-top"></a>
 
