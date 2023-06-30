@@ -14,7 +14,7 @@
 
   </a>
 <h3 align="center">🌱DAY03: 카운트다운 타이머 만들기🌱</h3>
-<h3><a href="https://resat-farming-challenge-livid.vercel.app/">⏲ 구경하러 가기</a></h3>
+<h3><a href="https://resat-farming-challenge-timer.vercel.app/">⏲ 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.21</h3>
 </div>
 
@@ -51,12 +51,10 @@
 ## 기술 스택
 
 ![HTML][html-shield]
-
 ![CSS][css-shield]
-
 ![typescript][javascript-shield]
-
 ![REACT][react-shield]
+![BOOTSTRAP][bootstrap-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,11 +62,15 @@
 
 ## 개선 사항
 
-- [ ] 목표 설정해서 헤더에 바뀌도록 설정
-- [ ] 완료 시 축하 애니메이션
-- [ ] 시, 분, 초 명시
-- [ ] 스타트인 경우 스타트 활성화 필요
-- [ ] 리셋하면 설정한 시간도 00:00:00으로 돌리기
+<input type="checkbox" /> 목표 설정해서 헤더에 바뀌도록 설정
+
+<input type="checkbox" /> 완료 시 축하 애니메이션
+
+<input type="checkbox" /> 시, 분, 초 명시
+
+<input type="checkbox" /> 스타트인 경우 스타트 활성화 필요
+
+<input type="checkbox" /> 리셋하면 설정한 시간도 00:00:00으로 돌리기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,3 +80,4 @@
 [css-shield]: https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 [javascript-shield]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
 [react-shield]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white
+[bootstrap-shield]: https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white

@@ -13,6 +13,7 @@
     </div>
   </a>
 <h3 align="center">🌱DAY02: 미니인턴 서비스 메인페이지 클론코딩🌱</h3>
+<h3><a href="https://blcklamb.github.io/RESAT_FarmingChallenge/day02/">구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.20</h3>
 </div>
 
@@ -45,7 +46,6 @@
 ## 기술 스택
 
 ![HTML][html-shield]
-
 ![CSS][css-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
