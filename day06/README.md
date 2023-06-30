@@ -14,7 +14,7 @@
 
   </a>
 <h3 align="center">🌱DAY06-08: 이미지 슬라이드 (캐러셀) 만들기🌱</h3>
-<h3><a href="https://resat-farming-challenge-carousel.vercel.app/">🪄 구경하러 가기</a></h3>
+<h3><a href="https://resat-farming-challenge-carousel.netlify.app/">🪄 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.26-23.06.28</h3>
 </div>
 
@@ -88,11 +88,8 @@
 ## 기술 스택
 
 ![HTML][html-shield]
-
 ![CSS][css-shield]
-
 ![JAVASCRIPT][javascript-shield]
-
 ![REACT][react-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -101,10 +98,11 @@
 
 ## 개선 사항
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<input type="checkbox" /> 이미지 로딩 속도 개선
 
-- 이미지 로딩 속도 개선
-- 채용형, 교육형 라벨 애니메이션, svg 로드 문제
+<input type="checkbox" /> 채용형, 교육형 라벨 애니메이션, svg 로드 문제
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
