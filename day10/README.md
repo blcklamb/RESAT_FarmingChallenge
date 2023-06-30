@@ -1,4 +1,4 @@
-# 👩‍🌾 RESAT_FarmingChallenge DAY09 🌾
+# 👩‍🌾 RESAT_FarmingChallenge DAY10 🌾
 
 <a name="readme-top"></a>
 
@@ -13,9 +13,9 @@
     </div>
 
   </a>
-<h3 align="center">🌱DAY09: 반응형 네비게이션 & 메뉴바 만들기🌱</h3>
+<h3 align="center">🌱DAY10: 로그인 페이지 만들기🌱</h3>
 <!-- <h3><a href="https://resat-farming-challenge-carousel.vercel.app/">🪄 구경하러 가기</a></h3> -->
-<h3 align="center">일자: 23.06.29</h3>
+<h3 align="center">일자: 23.06.30</h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
