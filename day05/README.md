@@ -10,12 +10,11 @@
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
         <img width="773" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/b05be391-24e3-4c8f-a9e0-8804221a0625">
-
     </div>
 
   </a>
 <h3 align="center">🌱DAY05: 달력 만들기🌱</h3>
-<h3><a href="https://resat-farming-challenge-qznu.vercel.app/">📆 구경하러 가기</a></h3>
+<h3><a href="https://resat-farming-challenge-calendar.vercel.app/">📆 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.23</h3>
 </div>
 
@@ -55,11 +54,8 @@
 ## 기술 스택
 
 ![HTML][html-shield]
-
 ![CSS][css-shield]
-
 ![JAVASCRIPT][javascript-shield]
-
 ![REACT][react-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -68,8 +64,11 @@
 
 ## 개선 사항
 
-- [ ] CRUD 비동기 걸기
-- [ ] 버튼 + 깨지는 것 수정하기
+<input type='checkbox'> CRUD 비동기 걸기
+
+<input type='checkbox'> 버튼 + 깨지는 것 수정하기
+
+<input type='checkbox'> 일정 추가 시 생기는 점 영역 미리 잡아두기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
