@@ -9,12 +9,12 @@
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
     <div width = "80" height="80">
-        <!-- <img width="1183" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/f9153da3-7170-494e-81e7-9200d4c3a58f"> -->
+     <img width="457" alt="image" src="https://github.com/blcklamb/RESAT_FarmingChallenge/assets/92101831/1ae0f01d-9d55-4060-b1fa-237785d27906">
     </div>
 
   </a>
 <h3 align="center">🌱DAY10: 로그인 페이지 만들기🌱</h3>
-<!-- <h3><a href="https://resat-farming-challenge-carousel.vercel.app/">🪄 구경하러 가기</a></h3> -->
+<h3><a href="https://resat-farming-challenge-login-page.netlify.app/">🔑 구경하러 가기</a></h3>
 <h3 align="center">일자: 23.06.30</h3>
 </div>
 
@@ -51,23 +51,12 @@
 ## 기술 스택
 
 ![HTML][html-shield]
-
 ![CSS][css-shield]
-
 ![TYPESCRIPT][typescript-shield]
-
 ![REACT][react-shield]
+![ANTD][antdesign-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ROADMAP -->
-
-## 개선 사항
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-- 이미지 로딩 속도 개선
-- 채용형, 교육형 라벨 애니메이션, svg 로드 문제
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -75,3 +64,4 @@
 [css-shield]: https://img.shields.io/badge/css3-1572B6?style=for-the-badge&logo=css3&logoColor=white
 [typescript-shield]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=black
 [react-shield]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white
+[antdesign-shield]: https://img.shields.io/badge/antdesign-0170FE?style=for-the-badge&logo=antdesign&logoColor=white
