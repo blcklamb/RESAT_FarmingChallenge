@@ -43,7 +43,7 @@
 | 1일차   | GitHub에 프로젝트 레포지토리 만들기                                                          | ✅  |
 | 2일차   | [미니인턴 서비스 메인 페이지 클론](https://blcklamb.github.io/RESAT_FarmingChallenge/day02/) | ✅  |
 | 3일차   | [카운트다운 타이머 만들기](https://resat-farming-challenge-timer.vercel.app/)                | ✅  |
-| 4일차   | [To-Do 리스트 만들기](https://resat-farming-challenge-todo-list.netlify.app/)                 | ✅  |
+| 4일차   | [To-Do 리스트 만들기](https://resat-farming-challenge-todo-list.netlify.app/)                | ✅  |
 | 5일차   | [캘린더 만들기](https://resat-farming-challenge-calendar.vercel.app/)                        | ✅  |
 | 6~8일차 | [이미지 슬라이드(캐러샐) 만들기](https://resat-farming-challenge-carousel.netlify.app/)      | ✅  |
 | 9일차   | [반응형 네비게이션 메뉴바 만들기](https://resat-farming-challenge-clone-page.vercel.app/)    | ✅  |
