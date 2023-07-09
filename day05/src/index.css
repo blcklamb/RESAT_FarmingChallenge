@@ -100,6 +100,13 @@ abbr[title] {
   display: flex;
 }
 
+.invisible-dot {
+  height: 8px;
+  width: 8px;
+  background-color: transparent;
+  display: flex;
+}
+
 .flex {
   display: flex;
 }

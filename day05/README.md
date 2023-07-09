@@ -64,11 +64,11 @@
 
 ## 개선 사항
 
-<input type='checkbox'> CRUD 비동기 걸기
+<input type='checkbox' checked> CRUD 비동기 걸기
 
 <input type='checkbox'> 버튼 + 깨지는 것 수정하기
 
-<input type='checkbox'> 일정 추가 시 생기는 점 영역 미리 잡아두기
+<input type='checkbox' checked> 일정 추가 시 생기는 점 영역 미리 잡아두기
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

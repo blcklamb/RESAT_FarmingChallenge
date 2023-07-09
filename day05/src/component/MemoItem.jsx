@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   RiDeleteBinLine,
   RiEdit2Line,
@@ -18,16 +18,16 @@ function MemoItem({ singleItem, refetch }) {
     setIsEditting(true);
   };
 
-  const onClickDeletedButton = () => {
+  const onClickDeletedButton = async () => {
     if (window.confirm("정말 삭제할거예요?")) {
-      deleteTodo();
-      refetch();
+      await deleteTodo();
+      await refetch();
     }
   };
 
-  const onClickEditConfirmButton = () => {
-    updateTodo();
-    refetch();
+  const onClickEditConfirmButton = async () => {
+    await updateTodo();
+    await refetch();
   };
 
   const onClickCancelButton = () => {
@@ -35,19 +35,13 @@ function MemoItem({ singleItem, refetch }) {
   };
 
   const deleteTodo = async () => {
-    await fetch(
-      `${
-        process.env.NODE_ENV !== "production"
-          ? "http://localhost:80"
-          : process.env.REACT_APP_ENDPOINT
-      }/memos/` + singleItem.id,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    ).then((res) => res.json());
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/memos/` + singleItem.id, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => res.json());
+    await refetch();
   };
 
   const updateTodo = async () => {
@@ -56,20 +50,13 @@ function MemoItem({ singleItem, refetch }) {
       date: singleItem.date,
       memo: todoContent,
     };
-    await fetch(
-      `${
-        process.env.NODE_ENV !== "production"
-          ? "http://localhost:80"
-          : process.env.REACT_APP_ENDPOINT
-      }/memos/` + singleItem.id,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(edittedData),
-      }
-    )
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/memos/` + singleItem.id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(edittedData),
+    })
       .then((res) => res.json())
       .then(() => {
         setIsEditting(false);

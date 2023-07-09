@@ -15,13 +15,9 @@ function Calendar() {
   };
 
   const fetchMemos = async () => {
-    const data = await fetch(
-      `${
-        process.env.NODE_ENV !== "production"
-          ? "http://localhost:80"
-          : process.env.REACT_APP_ENDPOINT
-      }/memos`
-    ).then((res) => res.json());
+    const data = await fetch(`${process.env.REACT_APP_ENDPOINT}/memos`).then(
+      (res) => res.json()
+    );
     setMemo(data);
   };
 
@@ -64,6 +60,12 @@ function Calendar() {
             return (
               <div className="flex justify-center items-center">
                 <div className="dot"></div>
+              </div>
+            );
+          } else {
+            return (
+              <div className="flex justify-center items-center">
+                <div className="invisible-dot"></div>
               </div>
             );
           }

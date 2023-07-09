@@ -7,9 +7,9 @@ function MemoSection({ date, memoList, refetchFunc }) {
     setTodo(event.target.value);
   };
 
-  const onClickSendButton = () => {
-    postTodo();
-    refetchFunc();
+  const onClickSendButton = async () => {
+    await postTodo();
+    await refetchFunc();
   };
 
   const postTodo = async () => {
@@ -18,22 +18,16 @@ function MemoSection({ date, memoList, refetchFunc }) {
       date: date.getTime(),
       memo: todo,
     };
-    await fetch(
-      `${
-        process.env.NODE_ENV !== "production"
-          ? "http://localhost:80"
-          : process.env.REACT_APP_ENDPOINT
-      }/memos`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    ).then(() => {
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/memos`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(() => {
       setTodo("");
     });
+    await refetchFunc();
   };
   return (
     <div className="memo-section mx-auto w-full">

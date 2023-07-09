@@ -7,7 +7,7 @@ function App() {
       <header>
         <h1>그저 달력 📆</h1>
       </header>
-      <Calendar></Calendar>
+      <Calendar />
     </div>
   );
 }
