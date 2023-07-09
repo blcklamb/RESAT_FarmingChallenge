@@ -75,7 +75,7 @@
 
 <input type='checkbox' >우선 순위 수정 가능 기능
 
-<input type='checkbox' >refetch timing issue
+<input type='checkbox' checked>refetch timing issue
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
