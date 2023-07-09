@@ -12,10 +12,10 @@ const Counter = () => {
         <Tab eventKey="default" title="기능 소개">
           <div className="timer-display">원하는 타이머를 선택하세요</div>
         </Tab>
-        <Tab eventKey="countDown" title="카운트다운 타이머">
+        <Tab eventKey="countDown" title="카운트다운">
           <TimerDown></TimerDown>
         </Tab>
-        <Tab eventKey="countUp" title="카운트업 타이머">
+        <Tab eventKey="countUp" title="카운트업">
           <TimerUp></TimerUp>
         </Tab>
       </Tabs>
