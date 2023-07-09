@@ -29,10 +29,10 @@ function ListItem({ singleItem, refetch }) {
     setIsEditting(true);
   };
 
-  const onClickDeletedButton = () => {
+  const onClickDeletedButton = async () => {
     if (window.confirm("정말 삭제할거예요?")) {
-      deleteTodo();
-      refetch();
+      await deleteTodo();
+      await refetch();
     }
   };
 
@@ -42,9 +42,9 @@ function ListItem({ singleItem, refetch }) {
     await refetch();
   };
 
-  const onClickEditConfirmButton = () => {
-    updateTodoChecked();
-    refetch();
+  const onClickEditConfirmButton = async () => {
+    await updateTodoEdited();
+    await refetch();
   };
 
   const onEditTodo = (event) => {
@@ -56,12 +56,33 @@ function ListItem({ singleItem, refetch }) {
   };
 
   const deleteTodo = async () => {
-    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts` + singleItem.id, {
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts/` + singleItem.id, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
       },
     }).then((res) => res.json());
+  };
+
+  const updateTodoEdited = async () => {
+    const edittedData = {
+      id: singleItem.id,
+      content: postData,
+      priority: singleItem.priority,
+      done: isDone,
+    };
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts/` + singleItem.id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(edittedData),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setIsEditting(false);
+        setPostData(postData);
+      });
   };
 
   const updateTodoChecked = async () => {
@@ -71,7 +92,7 @@ function ListItem({ singleItem, refetch }) {
       priority: singleItem.priority,
       done: !isDone,
     };
-    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts` + singleItem.id, {
+    await fetch(`${process.env.REACT_APP_ENDPOINT}/posts/` + singleItem.id, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
